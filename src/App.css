@@ -1,13 +1,18 @@
 .square {
-  height: 100px;
-  width: 100px;
   border: 2px solid black;
-  margin: 0  auto;
+  height: 200px;
+  width: 200px;
+  font-size: 11rem;
+  text-align: center;
 }
 
-.board {
-  display:flex;
-  flex-wrap:wrap;
-  margin-left:200px;
-  margin-right:200px
+.boardgame {
+  display: flex;
+  width: 620px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
 }

@@ -3,22 +3,20 @@ import Square from './components/Square'
 import './App.css'
 
 const App = () => {
-  const [squares, setSquares] = useState(Array(9).fill(null))
+  const [squares, setSquares] = useState([" "," "," "," "," "," "," "," "," "])
 
   const handleGamePlay = (index) => {
     const newSquares = [...squares]
-    newSquares[index] = "x"
+    newSquares[index] = "X"
     setSquares(newSquares)
-    alert(newSquares.value)
+    alert(newSquares)
   }
-// const handleGamePlay = (index) =>{
-//   alert(index)
-// }
+
 
   return (
     <>
       <h1>Tic Tac Toe</h1>
-      <div className="board" >
+      <div className="boardgame" >
         {squares.map( (value, index) => {
           return(
             <Square value ={value} index={index} handleGamePlay={handleGamePlay}/>
