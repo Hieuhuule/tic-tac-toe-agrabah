@@ -4,37 +4,34 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState([" ", " ", " ", " ", " ", " ", " ", " ", " "])
-  var [xTurn, setXTurn] = useState(0)
-  var [oTurn, setOTurn] = useState(0)
 
+  const [turnCount, setTurnCount] = useState(0)
 
-  // newSquares[index] = "X"
-  // setSquares(newSquares)
-
-  // Turn counter
-  // if counter is even, X's turn
-  // if counter is odd, O's turn
-  // if counter === 9, gameover
-  // add logic for handleGamePlay to put X or O's
 
   const handleGamePlay = (index) => {
-    
+
     const newSquares = [...squares]
-    if (xTurn === oTurn) {
-      newSquares[index] = "X"
-      setSquares(newSquares)
-      setXTurn(xTurn + 1)
-      console.log(setXTurn)
-    } else if (xTurn > oTurn) {
-      newSquares[index] = "O"
-      setSquares(newSquares)
-      setOTurn(oTurn + 1)
-      console.log(setOTurn)
-    // } else if (xTurn < oTurn) {
-    //   newSquares[index] = "X"
-    //   setSquares(newSquares)
-    //   setXTurn = xTurn + 1
-    //   console.log(setXTurn)
+    
+    if (turnCount === 9) {
+      alert("Game Over!")
+    } else if (
+      turnCount % 2 === 0
+      && newSquares[index] !== "X"
+      && newSquares[index] !== "O"
+      ) {
+        newSquares[index] = "X"
+        setSquares(newSquares)
+        setTurnCount((turnCount + 1))
+        console.log(turnCount)
+    } else if (
+      turnCount % 2 === 1 
+      && newSquares[index] !== "X" 
+      && newSquares[index] !== "O"
+      ) {
+        newSquares[index] = "O"
+        setSquares(newSquares)
+        setTurnCount((turnCount + 1))
+        console.log(turnCount)
     }
   }
 
