@@ -2,4 +2,12 @@
   height: 100px;
   width: 100px;
   border: 2px solid black;
+  margin: 0  auto;
+}
+
+.board {
+  display:flex;
+  flex-wrap:wrap;
+  margin-left:200px;
+  margin-right:200px
 }
