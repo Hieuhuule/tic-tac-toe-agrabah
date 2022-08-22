@@ -1,32 +1,16 @@
 import React, { useState } from 'react'
 import Square from './components/Square'
 import './App.css'
-import WinCondition from './components/WinConditions'
 import ResetButton from './components/ResetButton'
 const App = () => {
   const [squares, setSquares] = useState([" ", " ", " ", " ", " ", " ", " ", " ", " "])
 
   const [turnCount, setTurnCount] = useState(0)
 
-  // WIN CONDITION
-  // need to look at the state of squares
-    // if squares match win condition, alert
-  // write win conditions for every way, across, vertical, diagonal
-  // Win conditions for X
-    // across-top [0,1,2]
-    // across-middle [3,4,5]
-    // across-bottom [6,7,8]
-    // vert-left [0,3,6]
-    // vert-middle [1,4,7]
-    // vert-right [2,5,8]
-    // top-left-diag = [0,4,8]
-    // top-right-diag = [2,4,6]
-
   const handleGamePlay = (index) => {
 
     let newSquares = [...squares]
-   
-
+  
     if (turnCount === 8) {
       alert("Game Over!")
     } else if (
