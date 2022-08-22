@@ -24,34 +24,67 @@ const App = () => {
 
   const handleGamePlay = (index) => {
 
-    const newSquares = [...squares]
-    
+    let newSquares = [...squares]
+   
 
     if (turnCount === 8) {
       alert("Game Over!")
-
-        if ("X" === newSquares[0,1,2]  ||
-    "X" === newSquares[3,4,5]  ||
-    "X" === newSquares[6,7,8] ||
-    "X" === newSquares[0,3,6] ||
-    "X" === newSquares[1,4,7] ||
-    "X" === newSquares[2,5,8] ||
-    "X" === newSquares[0,4,8] ||
-    "X" === newSquares[2,4,6] 
-    ) {
-      alert("X is the winner!")
     } else if (
-        "O" === newSquares[0,1,2]  ||
-        "O" === newSquares[3,4,5]  ||
-        "O" === newSquares[6,7,8] ||
-        "O" === newSquares[0,3,6] ||
-        "O" === newSquares[1,4,7] ||
-        "O" === newSquares[2,5,8] ||
-        "O" === newSquares[0,4,8] ||
-        "O" === newSquares[2,4,6] 
-    ) {
-      alert("O is the winner!")
-    }
+      "X" === newSquares[0] && // across top
+      "X" === newSquares[1] &&
+      "X" === newSquares[2] ||
+      "X" === newSquares[3] && // accross mid
+      "X" === newSquares[4] &&
+      "X" === newSquares[5] ||
+      "X" === newSquares[6] && // accross bot
+      "X" === newSquares[7] &&
+      "X" === newSquares[8] ||
+      "X" === newSquares[0] && // vert left
+      "X" === newSquares[3] &&
+      "X" === newSquares[6] ||
+      "X" === newSquares[1] && // vert mid
+      "X" === newSquares[4] &&
+      "X" === newSquares[7] ||
+      "X" === newSquares[2] && // vert right
+      "X" === newSquares[5] &&
+      "X" === newSquares[8] ||
+      "X" === newSquares[0] && // top left diag
+      "X" === newSquares[4] &&
+      "X" === newSquares[8] ||
+      "X" === newSquares[2] && // top right diag
+      "X" === newSquares[4] &&
+      "X" === newSquares[6] 
+      ) {
+        alert("X is the winner!")
+      } else if (
+        "O" === newSquares[0] && // across top
+        "O" === newSquares[1] &&
+        "O" === newSquares[2] ||
+        "O" === newSquares[3] && // accross mid
+        "O" === newSquares[4] &&
+        "O" === newSquares[5] ||
+        "O" === newSquares[6] && // accross bot
+        "O" === newSquares[7] &&
+        "O" === newSquares[8] ||
+        "O" === newSquares[0] && // vert left
+        "O" === newSquares[3] &&
+        "O" === newSquares[6] ||
+        "O" === newSquares[1] && // vert mid
+        "O" === newSquares[4] &&
+        "O" === newSquares[7] ||
+        "O" === newSquares[2] && // vert right
+        "O" === newSquares[5] &&
+        "O" === newSquares[8] ||
+        "O" === newSquares[0] && // top left diag
+        "O" === newSquares[4] &&
+        "O" === newSquares[8] ||
+        "O" === newSquares[2] && // top right diag
+        "O" === newSquares[4] &&
+        "O" === newSquares[6] 
+      ) {
+        alert("O is the winner!")
+      
+   
 
     } else if (
       turnCount % 2 === 0
