@@ -125,6 +125,6 @@ const App = () => {
       <ResetButton handleResetGame={handleResetGame} turnCount={setTurnCount} square={setSquares} />
     </>
   )
-}    xxxx   xxxxx
+}  
 
 export default App

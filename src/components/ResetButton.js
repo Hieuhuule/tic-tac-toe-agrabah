@@ -1,4 +1,4 @@
-
+import React from 'react'
 const ResetButton = (props) =>  {
     const resetClick = () => {
         (props.handleResetGame(props.turnCount))
