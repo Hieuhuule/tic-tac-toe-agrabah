@@ -9,7 +9,6 @@ const App = () => {
     const newSquares = [...squares]
     newSquares[index] = "X"
     setSquares(newSquares)
-    alert(newSquares)
   }
 
 
