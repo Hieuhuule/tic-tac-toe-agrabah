@@ -7,6 +7,7 @@ const App = () => {
   let turnCounter = 0
   let xTurn = 0
   let oTurn = 0
+  const xTurn = squares.filter( if "O">"X")
 
   // newSquares[index] = "X"
   // setSquares(newSquares)
