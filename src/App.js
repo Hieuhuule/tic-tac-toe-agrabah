@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Square from './components/Square'
 import './App.css'
 import WinCondition from './components/WinConditions'
-
+import ResetButton from './components/ResetButton'
 const App = () => {
   const [squares, setSquares] = useState([" ", " ", " ", " ", " ", " ", " ", " ", " "])
 
@@ -107,6 +107,10 @@ const App = () => {
     }
   }
 
+    const handleResetGame = () => {
+       setSquares([" ", " ", " ", " ", " ", " ", " ", " ", " "])
+       setTurnCount(0)
+    }
 
   return (
     <>
@@ -118,8 +122,9 @@ const App = () => {
           )
         })}
       </div>
+      <ResetButton handleResetGame={handleResetGame} turnCount={setTurnCount} square={setSquares} />
     </>
   )
-}
+}    xxxx   xxxxx
 
 export default App
