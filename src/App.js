@@ -4,10 +4,9 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState([" ", " ", " ", " ", " ", " ", " ", " ", " "])
-  let turnCounter = 0
-  let xTurn = 0
-  let oTurn = 0
-  const xTurn = squares.filter( if "O">"X")
+  var [xTurn, setXTurn] = useState(0)
+  var [oTurn, setOTurn] = useState(0)
+
 
   // newSquares[index] = "X"
   // setSquares(newSquares)
@@ -24,18 +23,18 @@ const App = () => {
     if (xTurn === oTurn) {
       newSquares[index] = "X"
       setSquares(newSquares)
-      xTurn++
-      console.log(xTurn)
+      setXTurn(xTurn + 1)
+      console.log(setXTurn)
     } else if (xTurn > oTurn) {
       newSquares[index] = "O"
       setSquares(newSquares)
-      oTurn++
-      console.log(oTurn)
-    } else if (xTurn < oTurn) {
-      newSquares[index] = "X"
-      setSquares(newSquares)
-      xTurn++
-      console.log(xTurn)
+      setOTurn(oTurn + 1)
+      console.log(setOTurn)
+    // } else if (xTurn < oTurn) {
+    //   newSquares[index] = "X"
+    //   setSquares(newSquares)
+    //   setXTurn = xTurn + 1
+    //   console.log(setXTurn)
     }
   }
 
